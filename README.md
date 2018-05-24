@@ -1,4 +1,4 @@
-# vuebasics
+# Vue - Shopping Card
 
 > A Vue.js project
 
