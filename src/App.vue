@@ -4,10 +4,10 @@
       <p v-if="isLoading">Loading!</p>
       <h2>Shopping Cart - {{ this.items.length }}</h2>
       <p v-if="items.length == 0">No items!</p>
-      <p v-for="(item, index) in items"><img height="128px" width="128px" :key="index" :src="item.productimageurl" alt=""> {{ item.productname }} <button class="save" @click="savedUser(index)">Save for later</button> <button class="delete" @click="deleteUser(index)">Delete</button> </p>      
+      <p v-for="(item, index) in items"><img height="128px" width="128px" :key="index" :src="item.productimageurl" alt=""> {{ item.productname }}  <button class="delete" @click="deleteUser(index)">Delete</button><button class="save" @click="savedUser(index)">Save for later</button> </p>      
       <h2>Saved Items - {{ this.savedItems.length }}</h2>
       <p v-if="savedItems.length == 0">No Saved Items!</p>
-      <p v-for="(item, index) in savedItems" ><img height="128px" width="128px" :key="index" :src="item.productimageurl" alt=""> {{ item.productname }} <button class="move" @click="moveToCard(index)">Move to card</button> <button class="delete" @click="deleteSavedUser(index)">Delete</button></p>
+      <p v-for="(item, index) in savedItems" ><img height="128px" width="128px" :key="index" :src="item.productimageurl" alt=""> {{ item.productname }}  <button class="delete" @click="deleteSavedUser(index)">Delete</button><button class="move" @click="moveToCard(index)">Move to card</button></p>
   </div>
 </template>
 
@@ -110,6 +110,8 @@ img{
   background: #069;
   color:#FFF;
   cursor: pointer;
+  float:right;
+  margin-right:5px;
 }
 .delete{
   padding: 15px;
@@ -121,6 +123,7 @@ img{
   background: #e74c3c;
   color:#FFF;
   cursor: pointer;  
+  float:right;
 }
 .save{
   padding: 15px;
@@ -132,5 +135,7 @@ img{
   background:#2ecc71;
   color:#FFF;
   cursor: pointer;
+  float:right;
+  margin-right:5px;
 }
 </style>
